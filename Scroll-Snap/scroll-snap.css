@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    background: red;
+    height: 100%;
+    width: 100%;
+    /* scroll-snap-type: y mandatory; */ /* for Vertical scroll */
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+    scroll-behavior: smooth;
+}
+
+section {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+section:nth-of-type(1) {
+    background: #c0392b;
+}
+
+section:nth-of-type(2) {
+    background: #5f27cd;
+}
+
+section:nth-of-type(3) {
+    background: #218c74;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    color: #f9ca24;
+}

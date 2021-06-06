@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100vw;
+    height: 60vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.hidden-txt {
+    /* display: none; */
+    font-size: 0;
+}
+
+.show-txt {
+    font-size: 2rem;
+    position: relative;
+}
+
+.show-txt span::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    background: black;
+    width: 0.1em;
+    height: 1em;
+    animation: vanish 300ms ease-in forwards;
+}
+
+@keyframes vanish {
+    to {
+        background: transparent;
+    }
+}
