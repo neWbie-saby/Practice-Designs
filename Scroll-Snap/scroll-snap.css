@@ -17,6 +17,12 @@ main {
     overflow-x: scroll;
     display: flex;
     scroll-behavior: smooth;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; /* for Mozilla Firefox & Edge */
+}
+
+main::-webkit-scrollbar { /* for Chrome */
+    display: none;
 }
 
 section {
